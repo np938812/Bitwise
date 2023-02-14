@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container{
+            text-align: center;
+            border: 2px solid black;
+            background: #6262;
+        }
+    </style>
+
+</head>
+<h1 align="center" style="font-size:25px;">
+        Bit-Wise-Operator
+</h1>
+<body>
+<div  class="container">
+   <br>
+    <lable for="A">A:</lable>
+    <input type="text" Placeholder="value" id="A"> 
+<br><br>
+    <lable for="B">B:</lable>
+    <input type="text" placeholder="value" id="B">
+<br><br>
+<button onclick="calculateResult('^')">XOR</button>
+<br><br>
+<button onclick="calculateResult('&')">AND</button>
+<br><br>
+<button onclick="calculateResult('|')">OR</button>
+<br><br>
+<button onclick="calculateResult('>>')">&gt;&gt;</button>
+<br><br>
+<button onclick="calculateResult('<<')">&lt;&lt;</button>
+<br><br>
+<button onclick="calculateResult('>>>')">&gt;&gt;&gt;</button>
+
+<br><br>
+    <label for="">Result</label>
+    <input type="text" id="result"><br><br>
+</div>
+
+<script>
+    function calculateResult(operator) {
+        let a = document.getElementById('A').value;
+        let b = document.getElementById('B').value;
+
+        let result = a + operator + b;
+        result = eval(result);
+
+        document.getElementById('result').value = result;
+    }
+</script>
+</div>
+</body>
+</html>
